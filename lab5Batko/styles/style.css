@@ -1,0 +1,20 @@
+.orderLabel{
+    font-size: small;
+    font-weight: bold;
+}
+
+.orderError{
+    font-size: small;
+    font-weight: bold;
+    color: red;
+}
+
+.orderInput{
+    width: 90%;
+}
+
+.orderContainer{
+    background-color: lightgrey;
+    padding: 30pt;
+    width: 40%;
+}

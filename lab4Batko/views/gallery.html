@@ -1,0 +1,21 @@
+<h1>Moje podróże: {{selectedGallery.title}}</h1>
+<h3>{{selectedGallery.go_date | date:'dd MMMM yyyy'}} - {{selectedGallery.back_date | date:'dd MMMM yyyy'}}</h3>
+<h5>{{selectedGallery.description}}</h5>
+
+<div class="row">
+    <div class="col-md-1 col-md-offset-1 tag" ng-repeat="tag in selectedGallery.tags">
+        {{tag}}
+    </div>
+</div>
+<br />
+    <div class="row">
+        <img src="{{mainImageUrl}}" class="mainImg">
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-sm-2" ng-repeat="photo in selectedGallery.photos">
+            <img src="{{photo.thumbnailUrl}}" class="thumbnail" ng-click="setImage(photo.photoUrl)">
+        </div>
+    </div>

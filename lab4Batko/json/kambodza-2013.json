@@ -1,0 +1,47 @@
+{
+  "title": "Kambodża",
+  "id": "kambodza-2013",
+  "go_date": "2013-07-16",
+  "back_date": "2013-08-05",
+  "description": "Kilka dni zwariowanego wypadu do Kambodży.",
+  "tags":[
+    "africa",
+    "kambodza",
+    "trip",
+    "sunny",
+    "perfect",
+    "holiday"
+  ],
+  "photos":[
+    {
+      "photoUrl": "img\\portfolio\\kambodza-2013/kambodza01.jpg",
+      "thumbnailUrl": "img\\portfolio\\kambodza-2013/kambodza01.jpg",
+      "photoTitle": "Kambodza01"
+    },
+    {
+      "photoUrl": "img\\portfolio\\kambodza-2013/kambodza02.jpg",
+      "thumbnailUrl": "img\\portfolio\\kambodza-2013/kambodza02.jpg",
+      "photoTitle": "Kambodza02"
+    },
+    {
+      "photoUrl": "img\\portfolio\\kambodza-2013/kambodza03.jpg",
+      "thumbnailUrl": "img\\portfolio\\kambodza-2013/kambodza03.jpg",
+      "photoTitle": "Kambodza03"
+    },
+    {
+      "photoUrl": "img\\portfolio\\kambodza-2013/kambodza04.jpg",
+      "thumbnailUrl": "img\\portfolio\\kambodza-2013/kambodza04.jpg",
+      "photoTitle": "Kambodza04"
+    },
+    {
+      "photoUrl": "img\\portfolio\\kambodza-2013/kambodza05.jpg",
+      "thumbnailUrl": "img\\portfolio\\kambodza-2013/kambodza05.jpg",
+      "photoTitle": "Kambodza05"
+    },
+    {
+      "photoUrl": "img\\portfolio\\kambodza-2013/kambodza06.jpg",
+      "thumbnailUrl": "img\\portfolio\\kambodza-2013/kambodza06.jpg",
+      "photoTitle": "Kambodza06"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+	<script src="js/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-animate.js"></script>
+	<script src="js/app.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+  </head>
+  <body ng-controller="GreetingController">
+      <div class="container">
+      <div class="view-container">
+        <h1>Ilość aktywnych produktów: <label ng-class="{littleProductCount : activeProductCount() < 3, mediumProductCount : activeProductCount() >=3 && activeProductCount() < 5, manyProductCount : activeProductCount() >= 5}">{{activeProductCount()}}</label> / Ilość wszystkich produktów: <label>{{data.length}}</label></h1>
+        <br />
+        <label>Podaj zakres czasowy: </label>
+        <input type="date" ng-model="dateFrom"> - <input type="date" ng-model="dateTo">
+        <div class="row"><b><div class="col-sm-2">IMIE</div><div class="col-sm-2">NAZWA ARTYKUŁU</div><div class="col-sm-2">DATA DODANIA</div><div class="col-sm-2"></div></div></b>
+        <div class="row" ng-repeat="item in getArticles() | myfilter:dateFrom:dateTo" >
+          <div class="col-sm-2"> {{item.name}}</div><div class="col-sm-2"> {{item.articleName}}</div><div class="col-sm-2"> {{item.addDate | date:'yyyy-MM-dd HH:mm:ss'}}</div><div class="col-sm-2"><input type="checkbox" ng-model="item.archived"></div>
+        </div>
+        <div data-pagination></div>
+        <uib-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+        <br />
+        <br />
+
+        <div class="row">
+          <div class="col-sm-2"><input ng-model="nameToAdd"></div><div class="col-sm-2"><input ng-model="articleToAdd"></div><div class="col-sm-2"><button type="button" class="btn btn-default" ng-click="addItem(nameToAdd,articleToAdd)">Dodaj</button></div>
+        </div>
+        <button type="button" class="btn btn-default" ng-click="allArticleShow = !allArticleShow">Wstaw dane z archiwum</button>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>

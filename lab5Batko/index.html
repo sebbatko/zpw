@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shopApp" ng-controller="ShopCtrl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title ng-bind-template="{{query}}"></title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+	<script src="js/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-animate.js"></script>
+	<script src="js/app.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/animations.js"></script>
+
+
+
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  <br />
+
+      <div class="container" ng-if="actualView === 'SHOP_VIEW'">
+          <div class="row">
+              <div class="col-sm-2"><button type="button" class="btn btn-default" ng-click="setActualView('SHOP_VIEW')">Strona główna</button></div>
+              <div class="col-sm-2"><button type="button" class="btn btn-default" ng-click="setActualView('ADD_ARTICLE_VIEW')">Dodaj artykuł</button></div>
+              <div class="col-sm-2"><button type="button" class="btn btn-default" ng-click="setActualView('BASKET_VIEW')">Zakończ zakupy</button></div>
+          </div>
+          <br />
+        <div class="view-container">
+
+            <div class="row">
+                <b>Aktualny dzień tygodnia:</b> {{actualDate | weekDay}}
+            </div>
+            <div class="row">
+                <b>Nazwa dnia tygodnia za 2 dni:</b> {{getFewDaysLaterDate(2) | weekDay}}
+            </div>
+            <div class="row">
+                <b>Słowo oryginalnie i palindrom:</b> samochód | {{'samochód' | palindrome}}
+            </div>
+            <div class="row">
+                <y-widget></y-widget>
+            </div>
+            <div class="row">
+                <my-directive-four my-widget="'Tekst do wyświetlenia'"></my-directive-four>
+            </div>
+
+            <div class="row">
+                <ng-repeats how-many="5">ABC </ng-repeats>
+            </div>
+
+            <br />
+
+            <div class="row">
+                Nazwa szukanego produktu: <input type="text" ng-model="writtenText">
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">Zakres cenowy: </div>
+                <div class="col-sm-2"><input type="number" ng-model="priceBottom" placeholder="Decimal" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" required></div>
+                <div class="col-sm-2"><input type="number" ng-model="priceTop" placeholder="Decimal" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" required></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label>Kategorie:</label>
+                    <ul>
+                        <li><a href="" ng-click="search.kategoria=''">Wszystkie produkty</a></li>
+                        <li ng-repeat="category in categories"><a href="" ng-click="search.kategoria=category">{{category}}</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="row"><b><div class="col-sm-2">NAZWA</div><div class="col-sm-2">CENA[zł]</div><div class="col-sm-2">KATEGORIA</div><div class="col-sm-2"></div></b></div>
+                    <div class="row" ng-repeat="item in filtered = items | filter:search | productName:writtenText | productPrice:priceBottom:priceTop | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                        <div class="col-sm-2"> {{item.nazwa}}</div><div class="col-sm-2"> {{item.cena | currency: ""}}</div><div class="col-sm-2"> {{item.kategoria}}</div><div class="col-sm-2"><button type="button" class="btn btn-default" ng-click="addToBasket(item)">Dodaj do koszyka</button></div>
+                    </div>
+                    <uib-pagination page="currentPage" total-items="totalItems" items-per-page="entryLimit" max-size="noOfPages" ng-model="currentPage"></uib-pagination>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <add-article ng-if="actualView === 'ADD_ARTICLE_VIEW'"></add-article>
+
+  <basket ng-if="actualView === 'BASKET_VIEW'"></basket>
+
+  <address-form ng-if="actualView === 'FORM_VIEW'"></address-form>
+
+
+
+  </body>
+</html>

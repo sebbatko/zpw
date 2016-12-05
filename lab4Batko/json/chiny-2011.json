@@ -1,0 +1,47 @@
+{
+  "title": "Chiny",
+  "id": "chiny-2011",
+  "go_date": "2011-05-16",
+  "back_date": "2011-05-25",
+  "description": "Kilka dni zwariowanego wypadu do Chin.",
+  "tags":[
+    "freetime",
+    "china",
+    "trip",
+    "pekin",
+    "asia",
+    "awesome"
+  ],
+  "photos":[
+    {
+      "photoUrl": "img\\portfolio\\chiny-2011/chiny01.jpg",
+      "thumbnailUrl": "img\\portfolio\\chiny-2011/chiny01.jpg",
+      "photoTitle": "Chiny01"
+    },
+    {
+      "photoUrl": "img\\portfolio\\chiny-2011/chiny02.jpg",
+      "thumbnailUrl": "img\\portfolio\\chiny-2011/chiny02.jpg",
+      "photoTitle": "Chiny02"
+    },
+    {
+      "photoUrl": "img\\portfolio\\chiny-2011/chiny03.jpg",
+      "thumbnailUrl": "img\\portfolio\\chiny-2011/chiny03.jpg",
+      "photoTitle": "Chiny03"
+    },
+    {
+      "photoUrl": "img\\portfolio\\chiny-2011/chiny04.jpg",
+      "thumbnailUrl": "img\\portfolio\\chiny-2011/chiny04.jpg",
+      "photoTitle": "Chiny04"
+    },
+    {
+      "photoUrl": "img\\portfolio\\chiny-2011/chiny05.jpg",
+      "thumbnailUrl": "img\\portfolio\\chiny-2011/chiny05.jpg",
+      "photoTitle": "Chiny05"
+    },
+    {
+      "photoUrl": "img\\portfolio\\chiny-2011/chiny06.jpg",
+      "thumbnailUrl": "img\\portfolio\\chiny-2011/chiny06.jpg",
+      "photoTitle": "Chiny05"
+    }
+  ]
+}

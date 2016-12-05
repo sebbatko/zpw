@@ -1,0 +1,46 @@
+{
+  "title": "Turcja",
+  "id": "turcja-2012",
+  "go_date": "2012-06-05",
+  "back_date": "2012-06-17",
+  "description": "Kilka dni zwariowanego wypadu do Turcji.",
+  "tags":[
+    "turkey",
+    "ankara",
+    "trip",
+    "sun",
+    "sea"
+  ],
+  "photos":[
+    {
+      "photoUrl": "img\\portfolio\\turcja-2012/turcja01.jpg",
+      "thumbnailUrl": "img\\portfolio\\turcja-2012/turcja01.jpg",
+      "photoTitle": "Turcja01"
+    },
+    {
+      "photoUrl": "img\\portfolio\\turcja-2012/turcja02.jpg",
+      "thumbnailUrl": "img\\portfolio\\turcja-2012/turcja02.jpg",
+      "photoTitle": "Turcja02"
+    },
+    {
+      "photoUrl": "img\\portfolio\\turcja-2012/turcja03.jpg",
+      "thumbnailUrl": "img\\portfolio\\turcja-2012/turcja03.jpg",
+      "photoTitle": "Turcja03"
+    },
+    {
+      "photoUrl": "img\\portfolio\\turcja-2012/turcja04.jpg",
+      "thumbnailUrl": "img\\portfolio\\turcja-2012/turcja04.jpg",
+      "photoTitle": "Turcja04"
+    },
+    {
+      "photoUrl": "img\\portfolio\\turcja-2012/turcja05.jpg",
+      "thumbnailUrl": "img\\portfolio\\turcja-2012/turcja05.jpg",
+      "photoTitle": "Turcja05"
+    },
+    {
+      "photoUrl": "img\\portfolio\\turcja-2012/turcja06.jpg",
+      "thumbnailUrl": "img\\portfolio\\turcja-2012/turcja06.jpg",
+      "photoTitle": "Turcja06"
+    }
+  ]
+}

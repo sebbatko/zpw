@@ -1,0 +1,16 @@
+<div ng-controller="BasketCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2"><button type="button" class="btn btn-default" ng-click="setActualView('SHOP_VIEW')">Kontynuuj zakupy</button></div>
+            <div class="col-sm-2"><button type="button" class="btn btn-default" ng-click="setActualView('FORM_VIEW')">Złóż zamówienie</button></div>
+        </div>
+        <br />
+        <div class="view-container">
+            <b>Artykuły w koszyku:</b>
+            <div class="row"><b><div class="col-sm-2">NAZWA</div><div class="col-sm-2">CENA[zł]</div><div class="col-sm-2">KATEGORIA</div></b></div>
+            <div class="row" ng-repeat="article in articlesInBasket track by $index">
+                <div class="col-sm-2"> {{article.nazwa}}</div><div class="col-sm-2"> {{article.cena | currency: ""}}</div><div class="col-sm-2"> {{article.kategoria}}</div>
+            </div>
+        </div>
+    </div>
+</div>

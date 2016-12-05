@@ -1,0 +1,47 @@
+{
+  "title": "Maroko",
+  "id": "kambodza-2014",
+  "go_date": "2013-02-14",
+  "back_date": "2013-02-23",
+  "description": "Kilka dni zwariowanego wypadu do Maroko.",
+  "tags":[
+    "sunglasses",
+    "holiday",
+    "trip",
+    "maroko",
+    "great",
+    "chill"
+  ],
+  "photos":[
+    {
+      "photoUrl": "img\\portfolio\\maroko-2014/maroko01.jpg",
+      "thumbnailUrl": "img\\portfolio\\maroko-2014/maroko01.jpg",
+      "photoTitle": "Maroko01"
+    },
+    {
+      "photoUrl": "img\\portfolio\\maroko-2014/maroko02.jpg",
+      "thumbnailUrl": "img\\portfolio\\maroko-2014/maroko02.jpg",
+      "photoTitle": "Maroko02"
+    },
+    {
+      "photoUrl": "img\\portfolio\\maroko-2014/maroko03.jpg",
+      "thumbnailUrl": "img\\portfolio\\maroko-2014/maroko03.jpg",
+      "photoTitle": "Maroko03"
+    },
+    {
+      "photoUrl": "img\\portfolio\\maroko-2014/maroko04.jpg",
+      "thumbnailUrl": "img\\portfolio\\maroko-2014/maroko04.jpg",
+      "photoTitle": "Maroko04"
+    },
+    {
+      "photoUrl": "img\\portfolio\\maroko-2014/maroko05.jpg",
+      "thumbnailUrl": "img\\portfolio\\maroko-2014/maroko05.jpg",
+      "photoTitle": "Maroko05"
+    },
+    {
+      "photoUrl": "img\\portfolio\\maroko-2014/maroko06.jpg",
+      "thumbnailUrl": "img\\portfolio\\maroko-2014/maroko06.jpg",
+      "photoTitle": "Maroko06"
+    }
+  ]
+}

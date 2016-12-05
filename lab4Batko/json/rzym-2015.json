@@ -1,0 +1,46 @@
+{
+  "title": "Rzym",
+  "id": "rzym-2015",
+  "go_date": "2015-07-08",
+  "back_date": "2015-07-25",
+  "description": "Kilka dni zwariowanego wypadu do Rzymu.",
+  "tags":[
+    "europe",
+    "rome",
+    "trip",
+    "colosseum",
+    "weekend"
+  ],
+  "photos":[
+    {
+      "photoUrl": "img\\portfolio\\rzym-2015/rzym01.jpg",
+      "thumbnailUrl": "img\\portfolio\\rzym-2015/rzym01.jpg",
+      "photoTitle": "Rzym01"
+    },
+    {
+      "photoUrl": "img\\portfolio\\rzym-2015/rzym02.jpg",
+      "thumbnailUrl": "img\\portfolio\\rzym-2015/rzym02.jpg",
+      "photoTitle": "Rzym02"
+    },
+    {
+      "photoUrl": "img\\portfolio\\rzym-2015/rzym03.jpg",
+      "thumbnailUrl": "img\\portfolio\\rzym-2015/rzym03.jpg",
+      "photoTitle": "Rzym03"
+    },
+    {
+      "photoUrl": "img\\portfolio\\rzym-2015/rzym04.jpg",
+      "thumbnailUrl": "img\\portfolio\\rzym-2015/rzym04.jpg",
+      "photoTitle": "Rzym04"
+    },
+    {
+      "photoUrl": "img\\portfolio\\rzym-2015/rzym05.jpg",
+      "thumbnailUrl": "img\\portfolio\\rzym-2015/rzym05.jpg",
+      "photoTitle": "Rzym05"
+    },
+    {
+      "photoUrl": "img\\portfolio\\rzym-2015/rzym06.jpg",
+      "thumbnailUrl": "img\\portfolio\\rzym-2015/rzym06.jpg",
+      "photoTitle": "Rzym06"
+    }
+  ]
+}

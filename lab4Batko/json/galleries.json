@@ -1,0 +1,49 @@
+[
+  {
+    "id": "rzym-2015",
+    "title":"Rzym",
+    "when": "2015-12-08",
+    "thumbnailUrl":"img\\portfolio\\2015\\rzym.jpg",
+    "description": "Kilka dni zwariowanego wypadu do Rzymu."
+  },
+  {
+    "id": "maroko-2014",
+    "title":"Maroko",
+    "when": "2014-08-04",
+    "thumbnailUrl":"img\\portfolio\\2014\\maroko.jpg",
+    "description": "Kilka dni zwariowanego wypadu do Maroko."
+
+  },
+  {
+    "id": "tajlandia-2013",
+    "title":"Tajlandia",
+    "when": "2013-11-07",
+    "thumbnailUrl":"img\\portfolio\\2014\\tajlandia.jpg",
+    "description": "Kilka dni zwariowanego wypadu do Tajlandii."
+
+  },
+  {
+    "id": "kambodza-2013",
+    "title":"Kambodża",
+    "when": "2013-11-06",
+    "thumbnailUrl":"img\\portfolio\\2013\\kambodza.jpg",
+    "description": "Kilka dni zwariowanego wypadu do Kambodży."
+
+  },
+  {
+    "id": "turcja-2012",
+    "title":"Turcja",
+    "when": "2012-06-04",
+    "thumbnailUrl":"img\\portfolio\\2012\\turcja.jpg",
+    "description": "Kilka dni zwariowanego wypadu do Turcji."
+
+  },
+  {
+    "id": "chiny-2011",
+    "title":"Chiny",
+    "when": "2011-10-04",
+    "thumbnailUrl":"img\\portfolio\\2011\\chiny.jpg",
+    "description": "Kilka dni zwariowanego wypadu do Chin."
+
+  }
+]

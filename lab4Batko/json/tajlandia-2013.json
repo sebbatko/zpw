@@ -1,0 +1,47 @@
+{
+  "title": "Tajlandia",
+  "id": "tajlandia-2013",
+  "go_date": "2013-10-15",
+  "back_date": "2013-10-24",
+  "description": "Kilka dni zwariowanego wypadu do Tajlandii.",
+  "tags":[
+    "asia",
+    "freetime",
+    "trip",
+    "adventure",
+    "fish",
+    "sea"
+  ],
+  "photos":[
+    {
+      "photoUrl": "img\\portfolio\\tajlandia-2013/tajlandia01.jpg",
+      "thumbnailUrl": "img\\portfolio\\tajlandia-2013/tajlandia01.jpg",
+      "photoTitle": "Tajlandia01"
+    },
+    {
+      "photoUrl": "img\\portfolio\\tajlandia-2013/tajlandia02.jpg",
+      "thumbnailUrl": "img\\portfolio\\tajlandia-2013/tajlandia02.jpg",
+      "photoTitle": "Tajlandia02"
+    },
+    {
+      "photoUrl": "img\\portfolio\\tajlandia-2013/tajlandia03.jpg",
+      "thumbnailUrl": "img\\portfolio\\tajlandia-2013/tajlandia03.jpg",
+      "photoTitle": "Tajlandia03"
+    },
+    {
+      "photoUrl": "img\\portfolio\\tajlandia-2013/tajlandia04.jpg",
+      "thumbnailUrl": "img\\portfolio\\tajlandia-2013/tajlandia04.jpg",
+      "photoTitle": "Tajlandia04"
+    },
+    {
+      "photoUrl": "img\\portfolio\\tajlandia-2013/tajlandia05.jpg",
+      "thumbnailUrl": "img\\portfolio\\tajlandia-2013/tajlandia05.jpg",
+      "photoTitle": "Tajlandia05"
+    },
+    {
+      "photoUrl": "img\\portfolio\\tajlandia-2013/tajlandia06.jpg",
+      "thumbnailUrl": "img\\portfolio\\tajlandia-2013/tajlandia06.jpg",
+      "photoTitle": "Tajlandia06"
+    }
+  ]
+}

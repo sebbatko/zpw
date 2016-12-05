@@ -1,0 +1,29 @@
+<div class="row">
+    <h1>{{sectionTitle}}</h1>
+    <p>Tu będziemy wstawiać elementy galerii oparte o AngularJS</p>
+    <div class="col-md-4">
+        <label>Sortuj:</label>
+        <select ng-model="orderProp" ng-options="sort as sort.label for sort in sortList" class="form-control">
+            <option value="title">Alfabetycznie</option>
+            <option value="when">Chronologicznie</option>
+        </select>
+        <p ng-if="orderProp">Galeria ułożone: {{orderProp.label}}</p>
+    </div>
+
+    <div class="col-md-4 right">
+        <strong>Szukaj: </strong><input ng-model="query">
+        <p ng-if="query.length">Wyniki wyszukiwania dla: <strong>{{query}}</strong></p>
+        <p ng-if="!query.length">Ilość elementów: <strong>{{galleries.length}}</strong></p>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-sm-4 gallery-listing" ng-repeat="gallery in galleries | filter:query | orderBy: orderProp.value">
+        <a href="#/galleries/{{gallery.id}}">
+            <img src="{{gallery.thumbnailUrl}}" class="img-responsive">
+        </a>
+        <h3><a href="#/galleries/{{gallery.id}}">{{gallery.title}}</a></h3>
+        <p><strong>Kiedy: </strong>{{gallery.when | date:'d-MM-yyyy' | monthDayName}}</p>
+    </div>
+</div>

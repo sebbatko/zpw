@@ -1,0 +1,20 @@
+<div ng-controller="BasketCtrl">
+    <div class="container orderContainer">
+        <div class="view-container">
+            <div class="row"><h3>Odbiorca</h3></div>
+            <div class="row"><label class="orderLabel">Imie i nazwisko</label></div>
+            <div class="row"><input class="orderInput" type="text" ng-model="nameSurname" required></div>
+            <span class="orderError" ng-show="nameSurname === undefined || nameSurname === ''">Proszę podać imie i nazwisko</span>
+
+
+            <div class="row"><h3>Adres</h3></div>
+            <div class="row"><label class="orderLabel">Nazwa ulicy</label></div>
+            <div class="row"><input class="orderInput" type="text" ng-model="userAddress" required></div>
+            <span class="orderError" ng-show="userAddress === undefined || userAddress === ''">Proszę podać nazwę ulicy</span>
+
+            <br />
+            <br />
+            <div class="row"><button type="button" class="btn btn-default" ng-click="">Dokończ zamówienie</button></div>
+        </div>
+    </div>
+</div>
