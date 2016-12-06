@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"nazwa": {
+			"name": "nazwa",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "nazwa",
+			"order": 0
+		},
+		"cena": {
+			"name": "cena",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "cena",
+			"order": 1
+		},
+		"kategoria": {
+			"name": "kategoria",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "kategoria",
+			"order": 2
+		}
+	}
+}

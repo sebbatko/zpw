@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"artykul": {
+			"name": "artykul",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "artykul",
+			"order": 0
+		},
+		"cena": {
+			"name": "cena",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "cena",
+			"order": 1
+		}
+	}
+}
