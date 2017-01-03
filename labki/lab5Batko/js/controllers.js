@@ -16,7 +16,7 @@ appControllers.controller('ShopCtrl', ['$scope', 'filterFilter', 'BasketService'
 		$scope.items = data;
 		$scope.currentPage = 1;
 		$scope.totalItems = $scope.items.length;
-		$scope.entryLimit = 3;
+		$scope.entryLimit = 10;
 		$scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
 	}, function(error) {
 		alert('Błąd przy pobieraniu danych');

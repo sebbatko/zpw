@@ -12,7 +12,8 @@ mongoose.connect('mongodb://sebastian:agh2017projekt@ds151068.mlab.com:51068/res
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({'extended': 'true'}));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '5mb', extended: true}));
+app.use(bodyParser.urlencoded({limit: '5mb', extended: true}));
 app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(methodOverride());
 app.disable('etag');
@@ -70,6 +71,25 @@ app.delete('/api/meals', function(req,res){
            }
         });
 });
+
+
+app.put('/api/meals', function(req,res){
+    Meals.findOneAndUpdate({_id: req.body._id},req.body, {upsert:true, new: true, update: true}, function (err, meal) {
+        if(err){
+            console.log(err);
+            res.send(err);
+        }else{
+            res.json(meal);
+        }
+    })
+});
+
+
+
+
+
+
+
 
 app.get('/api/meal_categories', function (req, res) {
     MealCategories.find(function (err, mealCategories) {
