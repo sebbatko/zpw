@@ -31,6 +31,33 @@ appControllers.controller('RestaurantCtrl', ['$scope', 'filterFilter', 'Restaura
 		console.log('Nie udało się pobrać kategorii potraw');
 	}
 
+	RestaurantService.getMealCommentsByMealId('586aa2b827af5418b461d8c5')
+		.then(getMealCommentsByMealIdSuccess)
+		.catch(getMealCommentsByMealIdError);
+
+	function getMealCommentsByMealIdSuccess(response){
+		console.log('getMealCommentsByMealIdSuccess wynosi:');
+		console.log(response.data);
+	}
+
+	function getMealCommentsByMealIdError(){
+		console.log('Nie udało się pobrać komentarzy potraw');
+	}
+
+
+	RestaurantService.getMealPhotosByMealId('586aa2b827af5418b461d8c5')
+		.then(getMealPhotosByMealIdSuccess)
+		.catch(getMealPhotosByMealIdError);
+
+	function getMealPhotosByMealIdSuccess(response){
+		console.log('getMealPhotosByMealIdSuccess wynosi:');
+		console.log(response.data);
+	}
+
+	function getMealPhotosByMealIdError(){
+		console.log('Nie udało się pobrać zdjęć potraw');
+	}
+
 	$scope.$watch('search', function (newVal, oldVal) {
 		if(!angular.isUndefined($scope.meals)){
 			$scope.filtered = filterFilter($scope.meals, newVal);

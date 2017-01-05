@@ -19,6 +19,7 @@ app.use(methodOverride());
 app.disable('etag');
  
 var Schema = mongoose.Schema;
+
 var mealSchema = new Schema({
     name: String,
     price: Number,
@@ -31,8 +32,21 @@ var Meals = mongoose.model('Meals', mealSchema);
 var mealCategorySchema = new Schema({
     name: String,
     code: String
-})
+});
 var MealCategories = mongoose.model('MealCategories', mealCategorySchema);
+
+var mealCommentSchema = new Schema({
+    meal_id: String,
+    comment: String,
+    rating: Number
+});
+var MealComments = mongoose.model('mealComments', mealCommentSchema);
+
+var mealPhotoSchema = new Schema({
+    meal_id: String,
+    img: String
+});
+var MealPhotos = mongoose.model('mealPhotos', mealPhotoSchema);
 
 app.listen(8080);
 console.log("App listening on port 8080");
@@ -72,7 +86,6 @@ app.delete('/api/meals', function(req,res){
         });
 });
 
-
 app.put('/api/meals', function(req,res){
     Meals.findOneAndUpdate({_id: req.body._id},req.body, {upsert:true, new: true, update: true}, function (err, meal) {
         if(err){
@@ -83,12 +96,6 @@ app.put('/api/meals', function(req,res){
         }
     })
 });
-
-
-
-
-
-
 
 
 app.get('/api/meal_categories', function (req, res) {
@@ -139,3 +146,113 @@ app.delete('/api/meal_categories', function(req,res){
         }
     });
 });
+
+app.get('/api/meal_comments', function (req, res) {
+    if(req.query.meal_id){
+        MealComments.find({meal_id : req.query.meal_id}, function(err, mealComments) {
+            if (err)
+                res.send(err);
+            res.json(mealComments);
+        })
+    }else{
+        MealComments.find(function (err, mealComments) {
+            if (err)
+                res.send(err);
+            res.json(mealComments);
+        });
+    }
+});
+
+app.post('/api/meal_comments', function (req, res) {
+    new MealComments(req.body).save(function(err){
+        if (err)
+            res.send(err);
+        console.log('New meal comment saved');
+        res.send();
+    });
+    console.log(req.body);
+    console.log('Post meal comment');
+});
+
+app.delete('/api/meal_comments', function(req,res){
+    console.log(req.query.id);
+    MealComments.remove({_id: req.query.id}, function(err){
+        if(err){
+            res.send(err);
+        } else{
+            res.send();
+        }
+    });
+});
+
+app.put('/api/meal_comments', function(req,res){
+    MealComments.findOneAndUpdate({_id: req.body._id},req.body, {upsert:true, new: true, update: true}, function (err, mealComment) {
+        if(err){
+            console.log(err);
+            res.send(err);
+        }else{
+            res.json(mealComment);
+        }
+    });
+});
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------
+
+
+app.get('/api/meal_photos', function (req, res) {
+    if(req.query.meal_id){
+        MealPhotos.find({meal_id : req.query.meal_id}, function(err, mealPhotos) {
+            if (err)
+                res.send(err);
+            res.json(mealPhotos);
+        })
+    }else{
+        MealPhotos.find(function (err, mealPhotos) {
+            if (err)
+                res.send(err);
+            res.json(mealPhotos);
+        });
+    }
+});
+
+app.post('/api/meal_photos', function (req, res) {
+    new MealPhotos(req.body).save(function(err){
+        if (err)
+            res.send(err);
+        console.log('New meal photo saved');
+        res.send();
+    });
+    console.log(req.body);
+    console.log('Post meal photo');
+});
+
+app.delete('/api/meal_photos', function(req,res){
+    console.log(req.query.id);
+    MealPhotos.remove({_id: req.query.id}, function(err){
+        if(err){
+            res.send(err);
+        } else{
+            res.send();
+        }
+    });
+});
+
+app.put('/api/meal_photos', function(req,res){
+    MealPhotos.findOneAndUpdate({_id: req.body._id},req.body, {upsert:true, new: true, update: true}, function (err, mealPhoto) {
+        if(err){
+            console.log(err);
+            res.send(err);
+        }else{
+            res.json(mealPhoto);
+        }
+    });
+});
+
+
+
