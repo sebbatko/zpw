@@ -32,80 +32,115 @@
                 crossorigin="anonymous"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/common.js"></script>
+
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="js/ng-map.min.js"></script>
 </head>
 <body>
-    <header id="header">
-        <div class="container">
-            <div class="logo col-sm-4 col-xs-8">
-                <a href="#home-slider">Batko food</a>
-            </div>
-            <div class="mobile-menu col-xs-4 hidden-sm hidden-md hidden-lg">
-                <a id="mobile-button" href="">Menu</a>
-            </div>
-            <div class="nav-wrap col-sm-8 col-xs-12">
-                <div class="nav">
-                    <a href="#home-slider">Home</a>
-                    <a href="#menu">Menu</a>
-                    <a href="#rezerwacje">Rezerwacje</a>
-                </div>
-            </div>
+<header id="header">
+    <div class="container">
+        <div class="logo col-sm-4 col-xs-8">
+            <a href="#home-slider">Batko food</a>
         </div>
-    </header>
-    <div id="home-slider">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item active slider" style="background-image: url(img/restaurant_photos/restaurant1.jpg);">
-                </div>
-                <div class="item slider" style="background-image: url(img/restaurant_photos/restaurant2.jpg);">
-                </div>
-                <div class="item slider" style="background-image: url(img/restaurant_photos/restaurant3.jpg);">
-                </div>
+        <div class="mobile-menu col-xs-4 hidden-sm hidden-md hidden-lg">
+            <a id="mobile-button" href="">Menu</a>
+        </div>
+        <div class="nav-wrap col-sm-8 col-xs-12">
+            <div class="nav">
+                <a href="#home-slider">Home</a>
+                <a href="#aboutus">O nas</a>
+                <a href="#menu">Menu</a>
+                <a href="#rezerwacje">Rezerwacje</a>
             </div>
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </a>
         </div>
     </div>
-    <section id="menu">
-        <div class="container">
-            aaa
+</header>
+<div id="home-slider">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active slider" style="background-image: url(img/restaurant_photos/restaurant1.jpg);">
+            </div>
+            <div class="item slider" style="background-image: url(img/restaurant_photos/restaurant2.jpg);">
+            </div>
+            <div class="item slider" style="background-image: url(img/restaurant_photos/restaurant3.jpg);">
+            </div>
         </div>
-    </section>
-    <section id="rezerwacje">
-        <div class="container">
-            aaa
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+        </a>
+    </div>
+</div>
+
+<section id="aboutus">
+    <div class="container">
+
+        <div class="sectionHeader"><h1 class="sectionHeaderText">O nas</h1></div>
+        <div class="row aboutRow">
+            <div class="col-sm-5 col-xs-10">
+                <img src="img/special_photos/family.jpg" class="specialImage center" />
+                <div class="divText"><label>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id dapibus lacus, non pretium mi. Etiam eu elit ut elit aliquet fermentum eget a sem. Donec sodales imperdiet sodales.
+
+                    Phasellus augue diam, ornare in vehicula sed, maximus sed dui. Duis non purus arcu. In hac habitasse platea dictumst. Maecenas maximus neque a condimentum luctus. Fusce id nibh odio. Maecenas ut eros orci.</label></div>
+            </div>
+            <div class="col-sm-7 col-xs-12">
+                <div class="center" map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyBmFwKs2nlgR_SnRzNnu8VvtceUlDWx07s">
+                    <ng-map class="map" zoom="15" center="[50.063727,19.9383163]" default-style="false">
+                        <marker position="[50.063727,19.9383163]" title="Batko food"></marker>
+                    </ng-map>
+
+                </div>
+            </div>
         </div>
-    </section>
-    <div id="menuSection" class="page">
-	<div class="container">
-        <div class="row">
-            <div class="col-md-3">
+    </div>
+</section>
+
+<section id="menu" >
+    <div class="container">
+
+        <div class="row fade-element-in" ng-if="actualMenuSectionView === 'MENU_VIEW'">
+            <div class="col-md-3 col-xs-8 dishesCategoryMenu">
                 <label>Potrawy</label>
                 <ul>
                     <li ng-repeat="mealCategory in mealCategories"><a href="" ng-click="search.category=mealCategory.code">{{mealCategory.name}}</a></li>
                 </ul>
             </div>
 
-            <div class="col-md-5 dishesMenu">
-                <div class="row"><b><div class="col-sm-2">NUMER</div><div class="col-sm-6">DANIE</div><div class="col-sm-2">CENA</div></b></div>
+            <div class="col-md-8 col-xs-8 dishesMenu">
+
+                <h3>Spis dań</h3><br />
+                <div class="row"><b><div class="col-sm-2">NUMER</div><div class="col-sm-5">DANIE</div><div class="col-sm-2">CENA</div></b></div><br />
                 <div class="row" ng-repeat="meal in meals | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" ng-click="aaaa">
-                    <a href="" class="dishesMenu"><div class="col-sm-2">1.</div><div class="col-sm-6"> {{meal.name}}</div><div class="col-sm-2"> {{meal.price | currency: ""}} zł</div></a>
+                    <a href="" class="dishesMenu" ng-click="showDishDetails(meal)"><div class="col-sm-2">1.</div><div class="col-sm-5"> {{meal.name}}</div><div class="col-sm-2"> {{meal.price | currency: ""}} zł</div></a>
                 </div>
                 <uib-pagination page="currentPage" total-items="totalItems" items-per-page="entryLimit" max-size="noOfPages" ng-model="currentPage"></uib-pagination>
             </div>
-
         </div>
+
+
+        <dish-details></dish-details>
+
     </div>
+
+
+</section>
+<section id="rezerwacje">
+    <div class="container">
+        aaa
+    </div>
+</section>
+
 </div>
+
+
 </body>
 </html>

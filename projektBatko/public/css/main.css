@@ -5,7 +5,8 @@
 
 body {
 	padding: 0 !important;
-	font-family: Cuprum, sans-serif !important;
+	font-family: Palatino Linotype, sans-serif !important;
+	color: white;
 }
 
 .carousel-control {
@@ -87,21 +88,44 @@ body {
 	font-size: 30px;
 }
 
-#menu,
+/*#menu,*/
+/*#rezerwacje*/
+/*{*/
+	/*width: 100%;*/
+	/*height: 100vh;*/
+	/*background-attachment: fixed;*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: center center;*/
+/*}*/
+
+#menu {
+	background-image: url(../img/background/menu.jpg);
+}
+
 #rezerwacje {
+	background-image: url(../img/background/reservation.jpg);
+}
+
+.sectionHeaderText{
+	text-align: center;
+}
+#menu,
+#rezerwacje,
+#aboutus {
 	width: 100%;
-	height: 100vh;
+	height: 80vh;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center center;
+
 }
 
-#menu {
-	background-image: url(../img/restaurant_photos/restaurant3.jpg);
+#aboutus{
+	background-image: url(../img/background/aboutus.jpg);
 }
 
-#rezerwacje {
-	background-image: url(../img/restaurant_photos/restaurant4.jpg);
+#menu{
+	color: white;
 }
 
 @media screen and (max-width: 767px) {
@@ -119,4 +143,119 @@ body {
 		margin: 0 0 20px;
 		text-align: center;
 	}
+}
+
+.sectionHeader {
+	margin: auto;
+	width: 30%;
+	border: 5px dashed black;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	border-color: white;
+	color: white;
+}
+
+.map{
+	width: 100%;
+	height: 500px;
+	padding: 20px;
+	border: 3px dashed black;
+	border-color: white;
+}
+
+@media screen and (max-width: 767px) {
+	.map {
+		height: 200px;
+	}
+}
+
+
+.aboutRow{
+	height: 500px;
+	min-height: 200px;
+}
+
+img.center{
+	display: block;
+	margin: 0 auto;
+}
+
+.specialImage{
+	width: 100%;
+	height: 40%;
+	padding: 20px;
+	border: 3px dashed black;
+	border-color: white;
+	margin: 10px;
+}
+
+.secondHeader{
+	text-align: center;
+	border: 3px dashed black;
+	border-color: white;
+	width: 30%;
+	margin: auto;
+	margin-bottom: 10px;
+	color: white;
+}
+
+label{
+	margin: 10px;
+}
+
+.divText{
+	padding: 10px;
+	margin-top: 10px;
+	/*background-color: grey;*/
+	border: 3px dashed black;
+	border-color: white;
+	color: white;
+}
+
+.dishesCategoryMenu{
+	color: white;
+	background: #485563; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #485563 , #29323c); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #485563 , #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin: 10px;
+}
+
+.dishesMenu{
+	width: 100%;
+	height: 80%;
+	background: #485563; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #485563 , #29323c); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #485563 , #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: white;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+h1,h2,h3{
+	text-align: center;
+}
+
+
+.fade-element-in.ng-enter {
+	transition: 0.8s linear all;
+	opacity: 0;
+}
+
+.fade-element-in-init .fade-element-in.ng-enter {
+	opacity: 1;
+}
+
+.fade-element-in.ng-enter.ng-enter-active {
+	opacity: 1;
+}
+
+.fade-element-in.ng-leave {
+	transition: 0.3s linear all;
+	opacity: 1;
+}
+.fade-element-in.ng-leave.ng-leave-active {
+	opacity: 0;
 }

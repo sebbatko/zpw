@@ -39,9 +39,16 @@ $(document).ready(function () {
 
     function activeMenu() {
         var homeStart = $('#home-slider').offset().top, homeEnd = homeStart + $('#home-slider').height();
+        var aboutUsStart = $('#aboutus').offset().top, aboutUsEnd = aboutUsStart + $('#aboutus').height();
         var aboutStart = $('#menu').offset().top, aboutEnd = aboutStart + $('#menu').height();
         var servicesStart = $('#rezerwacje').offset().top, servicesEnd = servicesStart + $('#rezerwacje').height();
         var tempScroll = $(window).scrollTop() + 131;
+
+        if (tempScroll >= aboutUsStart && tempScroll < aboutUsEnd) {
+            $('#header .nav a[href="#home-slider"]').addClass('active');
+        } else {
+            $('#header .nav a[href="#home-slider"]').removeClass('active');
+        }
 
         if (tempScroll >= homeStart && tempScroll < homeEnd) {
             $('#header .nav a[href="#home-slider"]').addClass('active');

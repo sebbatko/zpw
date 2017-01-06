@@ -1,6 +1,6 @@
 var appServices = angular.module('appServices',['ngResource']);
-appServices.factory('RestaurantService', RestaurantService);
 
+appServices.factory('RestaurantService', RestaurantService);
 RestaurantService.$inject = ['$http'];
 function RestaurantService($http){
     var service = {
@@ -39,5 +39,21 @@ function RestaurantService($http){
             url: 'http://localhost:8080/api/meal_photos?meal_id=' + mealId
         })
     }
+}
 
+appServices.factory('DishDetailsService', RestaurantService);
+DishDetailsService.$inject = ['$http'];
+function DishDetailsService($http){
+    var service = {
+        getMealCommentsByMealId: getMealCommentsByMealId,
+    }
+
+    return service;
+
+    function getMealCommentsByMealId(mealId){
+        return $http({
+            method: 'GET',
+            url: 'http://localhost:8080/api/meal_comments?meal_id=' + mealId
+        })
+    }
 }

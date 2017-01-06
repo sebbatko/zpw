@@ -2,7 +2,21 @@ var appControllers = angular.module('appControllers',['ui.bootstrap']);
 
 appControllers.controller('RestaurantCtrl', ['$scope', 'filterFilter', 'RestaurantService', function($scope, filterFilter, RestaurantService) {
 
+	const MENU_VIEW = 'MENU_VIEW';
+	const DISH_DETAILS_VIEW = 'DISH_DETAILS_VIEW';
+
+	$scope.showDishDetails = showDishDetails;
+	$scope.showDishesMenu = showDishesMenu;
+
 	$scope.search = {};
+	$scope.actualMenuSectionView = MENU_VIEW;
+	$scope.selectedDish = null;
+
+
+	console.log('ACTUAL SECTION VIEW:');
+	console.log($scope.actualMenuSectionView);
+
+
 	RestaurantService.getMeals()
 		.then(getMealsSuccess)
 		.catch(getMealsError);
@@ -68,5 +82,29 @@ appControllers.controller('RestaurantCtrl', ['$scope', 'filterFilter', 'Restaura
 			$scope.currentPage = 1;
 		}
 	}, true);
+
+    var vm = this;
+    vm.toggleBounce = function() {
+        if (this.getAnimation() != null) {
+            this.setAnimation(null);
+        } else {
+            this.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
+
+    function showDishDetails(selectedDish){
+		$scope.actualMenuSectionView = DISH_DETAILS_VIEW;
+		$scope.selectedDish = selectedDish;
+		console.log()
+	}
+
+	function showDishesMenu(){
+		$scope.actualMenuSectionView = MENU_VIEW;
+	}
+
+
+}]);
+
+appControllers.controller('DishDetailsCtrl', ['$scope', '$http', 'DishDetailsService', function($scope, $http, DishDetailsService) {
 
 }]);
